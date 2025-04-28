@@ -1,0 +1,10 @@
+Exercise 1
+Create a directory called ""my_folder" --> mkdir my_folder
+Create a file named ""my_file.txt"" with some text. --> vim /my_folder/my_file.txt
+Create another file named ""another_file.txt"" with some text --> vim /my_folder/another_file.txt
+Concatenate the content of ""another_file.txt"" to ""my_file.txt" and display the updated content
+
+Exercise 2
+Create 20 files with .txt extensions --> for i in {1..20}; do touch "file$i.txt"; done
+Rename the first 5 files to .yml extension --> for i in {1..5}; do mv "file$i.txt" "file$i.yml"; done
+Print the latest created top 5 files among the total no of files --> ls -t | head -n 5
