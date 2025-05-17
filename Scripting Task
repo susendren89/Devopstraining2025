@@ -1,0 +1,20 @@
+Exercise 1 : Create a shell script to print the HTTP error code of guvi.in & print, the success/failure message based on the error code response
+
+#!/bin/bash
+
+URL="https://www.guvi.in/"
+
+# Get Status Code
+Status_code=$(curl -o /dev/null -s -w "%{http_code}" "$URL")
+
+#Print Status code
+echo "Http Status code : $Status_code"
+
+#Verify Success or failure
+if [[ "$Status_code" -ge 200 && "$Status_code" -lt 300 ]]; then
+        echo "Website is reachable & Up"
+elif [[ "$Status_code" -ge 400 && "$Status_code" -lt 600 ]]; then
+        echo "Website not reachable & Down "
+else
+        echo "Something went wrong....Please check manually"
+fi
