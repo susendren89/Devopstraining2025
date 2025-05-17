@@ -18,3 +18,7 @@ elif [[ "$Status_code" -ge 400 && "$Status_code" -lt 600 ]]; then
 else
         echo "Something went wrong....Please check manually"
 fi
+
+Exercise 2: Given a file, replace all occurrence of the word "give" with "learning" from 5th line till the end in only those lines that contain the word "welcome"
+
+ sed -i '5, ${/Welcome/ s/give/learning/g}'filename.txt
